@@ -15,22 +15,58 @@
 O Princípio da Indução e suas Aplicações
 }
 
-\author{Flávio L. C. de Moura}
+\author{Gabriel Alves 17/0033813, \\
+        Henrique Mariano 17/0012280, \\
+        Matheus Breder 17/0018997, \\
+        Yuri Serka 17/0024385.}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
 
-Neste trabalho mostraremos diversas utilizações do princípio de indução em Ciência da Computação.
+Neste trabalho foi trabalhado os conceitos de Indução, que pode ser Fraca ou Forte e como elas se completam. Também foi proposto a análise da correção do algoritmo de ordenação $"Insertion Sort"$.
 
 \end{abstract}
 
 \section{Introdução}
 
-Indução é um princípio importante...
+A indução matemática é um poderoso artifício matemático utilizado para demonstrar a verdade de um número infinito de proposições. Há, no entanto, dois tipos de indução, a fraca e a forte.
 
-\section{Indução Estrutural}
+A indução fraca toma como passo base mostrar que o enunciado vale para $n = b$ e então é feito o passo indutivo que consiste em mostrar que, se o enunciado vale para $n = k \geq{b} $, então o mesmo enunciado vale para $n = k + 1$.
+
+Matemáticamente podemos escrever o Princípio da Indução Fraca, também conhecidada como Princípio da Indução Matemática, como:
+
+$$
+PIM = \begin{cases}
+h_1 = P(0), &\mbox{onde } P\mbox{ é uma propriedade qualquer}\\
+\forall{n}(P(n)), &\mbox{se}\quad \forall{m}(P(m) \implies P(m+1))
+\end{cases}
+$$
+
+A indução forte ou princípio da boa ordem, toma como caso base mostrar que o enunciado vale para todos os números anteriores ao que se quer provar, se isso acontecer então a propriedade vale para este número.
+
+Matemáticamente podemos escrever o Princípio da Indução Forte como:
+
+$$
+PIF = \forall{n}(P(n)), \quad\mbox{se}\quad\forall{k}(\forall{m}(m < k, P(m)) \implies P(k))
+$$
+
+Com isto podemos provar grande parte dos problemas de indução que forem propostos.
+
+% explicar melhor ainda
+
+A indução estrutural é parecido com a indução forte, mas é comumente usada para provar conjuntos definidos recursivamente. A semelhança vem pelo fato de que o passo base é mostrar que o enunciado vale para todos os casos da definição da recursão, já o passo indutivo consiste em verificar se o enunciado vale para todos estes subconjuntos, então deve valer para o atual.
+
+\section{Indução forte é equivalente a indução fraca}
+
+\section{insertion sort é correto}
+
+\subsection{Algoritmo correto}
+
+Um algoritmo é definido como correto se cumpre as responsabilidades a ele denominadas. Ou seja, por exemplo, um algortimo geral de ordenação é correto se ao ser aplicado sob qualquer lista de naturais, retornar uma lista de mesma cardinalidade, e com os mesmo termos, ordenados. 
+
+\subsection{Um teorema que afira a corretude}
 
 \section{Conclusão}
 
